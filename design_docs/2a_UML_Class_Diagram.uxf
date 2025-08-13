@@ -1,0 +1,114 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>72</x><y>521</y><w>210</w><h>210</h></coordinates><panel_attributes>_Blip_
+--
+screen: pygame.Surface
+x, y
+radius
+color
+speed
+hit_sound
+bounce_sound
+lives
+--
+draw()
+move()
+disintegrate()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>612</x><y>381</y><w>210</w><h>170</h></coordinates><panel_attributes>_Column_
+--
+screen: pygame.Surface
+x, y
+width, height
+color
+extend_sound
+stuck_sound
+--
+draw()
+extend()
+stuck()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>342</x><y>561</y><w>210</w><h>110</h></coordinates><panel_attributes>_Obstacle_
+--
+screen: pygame.Surface
+x, y
+width, height
+color
+--
+draw()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLActor</id><coordinates><x>122</x><y>81</y><w>60</w><h>110</h></coordinates><panel_attributes>Player </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>12</x><y>0</y><w>180</w><h>50</h></coordinates><panel_attributes>Model_View_controller
+(MVC) architecture
+Column Collisions
+bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>101</x><y>170</y><w>70</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;60;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>141</x><y>170</y><w>60</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>40;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1</x><y>230</y><w>310</w><h>90</h></coordinates><panel_attributes>Controller
+--
+--
+get_and_handle_Events()
+exit_if_time_to_quit(events
+key_was_pressed_on_this_cycle(key, events) -&gt; bool
+bg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>201</x><y>10</y><w>340</w><h>170</h></coordinates><panel_attributes>halign=left
+main
+--
+Initializes PyGame
+
+Implements a Model-View_Controller (MVC) architecture:
+1. Constructs the Game, View and Controller.
+2. Enters the game loop, which repeatedly:
+  --Asks the Controller objcts to get and respond to events.
+  --Asks the Game object to run one cycle.
+  --Asks the View object to draw everything. 
+
+bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>351</x><y>230</y><w>360</w><h>120</h></coordinates><panel_attributes>Game
+--
+--
+run_one_cycle()
+  --tells the Game to do whatever actions need to happen
+    (independently of user input) during this cycle of the game loop
+draw_game()
+  --tells the Game objects to draw themselves
+bg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>631</x><y>40</y><w>210</w><h>120</h></coordinates><panel_attributes>View
+--
+--
+draw_everything()
+  --Draw the background.
+  --Asks the Game object to ask the 
+    Game things to draw themselves.
+bg=red
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>862</x><y>121</y><w>160</w><h>130</h></coordinates><panel_attributes>_ScoreBoard_
+--
+screen: pygame.Surface
+background: (R, G, B)
+x, y
+font class, size, color
+--
+draw()
+increment_score()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLPackage</id><coordinates><x>751</x><y>260</y><w>220</w><h>80</h></coordinates><panel_attributes>halign=center
+screen
+--
+The pygame.Surface.object.returned
+by pygame.display.set_model()
+bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>172</x><y>180</y><w>80</w><h>30</h></coordinates><panel_attributes>wasd keys
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>252</x><y>170</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;60;20;10</additional_attributes></element><element><id>Relation</id><coordinates><x>372</x><y>170</y><w>110</w><h>80</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>90;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>502</x><y>170</y><w>290</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>270;90;270;30;50;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>532</x><y>90</y><w>120</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>622</x><y>150</y><w>60</w><h>100</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;80;40;10</additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>150</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>892</x><y>240</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>272</x><y>330</y><w>620</w><h>380</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>600;10;600;360;10;360</additional_attributes></element><element><id>Relation</id><coordinates><x>392</x><y>330</y><w>480</w><h>370</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>460;10;460;350;10;350;10;340</additional_attributes></element><element><id>Relation</id><coordinates><x>782</x><y>330</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>462</x><y>340</y><w>50</w><h>80</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>30;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>262</x><y>340</y><w>130</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;50;110;40;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>702</x><y>300</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>302</x><y>280</y><w>70</w><h>50</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;30;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>72</x><y>180</y><w>80</w><h>30</h></coordinates><panel_attributes>arrow keys
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>582</x><y>350</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>412</x><y>370</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>292</x><y>350</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>552</x><y>70</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>572</x><y>180</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>432</x><y>190</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>272</x><y>190</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>642</x><y>340</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>362</x><y>400</y><w>210</w><h>130</h></coordinates><panel_attributes>_Obstacles_
+--
+screen: pygame.Surface
+list_of_missles: [Obstacle]
+--
+draw()
+move()
+add_obstacle()
+remove_obstacle()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>62</x><y>340</y><w>210</w><h>140</h></coordinates><panel_attributes>_Blips_
+--
+screen: pygame.Surface
+list_of_blips: [Blips]
+--
+draw()
+move()
+add_blip()
+remove_blip()
+add_points(Scoreboard)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>541</x><y>330</y><w>320</w><h>320</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>300;10;300;300;10;300</additional_attributes></element><element><id>Relation</id><coordinates><x>171</x><y>470</y><w>30</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;50;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>182</x><y>480</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>292</x><y>430</y><w>80</w><h>30</h></coordinates><panel_attributes>constructs
+style=wordwrap</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>450</y><w>80</w><h>150</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>40;130;10;130;10;10;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>330</y><w>290</w><h>280</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>270;10;270;260;10;260;10;200</additional_attributes></element></diagram>
