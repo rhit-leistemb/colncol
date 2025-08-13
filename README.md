@@ -46,13 +46,15 @@ The objective of the game is to hit a moving blip using two columns confined to 
      -random
 
 ## List all media items (images, music, other graphics, etc)
-   that are not your own, and their sources (e.g. URLs).
-        -Game Over image
-            https://www.pngitem.com/pimgs/m/229-2298909_background-flappy-bird-game-over-hd-png-download.png
-        -Pause Icon image
-            https://i.ytimg.com/vi/_12ftZv9eHk/maxresdefault.jpg
-        -Pause Button image
-            https://i.ytimg.com/vi/_12ftZv9eHk/maxresdefault.jpg
-        -Resume Button image
-            https://i.ytimg.com/vi/_12ftZv9eHk/maxresdefault.jpg
+    -Game Over image
+        https://www.pngitem.com/pimgs/m/229-2298909_background-flappy-bird-game-over-hd-png-download.png
+
+    -Pause Icon image
+        https://i.ytimg.com/vi/_12ftZv9eHk/maxresdefault.jpg
+
+    -Pause Button image
+        https://i.ytimg.com/vi/_12ftZv9eHk/maxresdefault.jpg
+        
+    -Resume Button image
+        https://i.ytimg.com/vi/_12ftZv9eHk/maxresdefault.jpg
 
